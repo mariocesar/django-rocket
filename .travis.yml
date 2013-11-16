@@ -13,12 +13,11 @@ matrix:
         - DJANGO_VERSION=1.6
 
 env:
-  - DJANGO_VERSION=1.5
+  - DJANGO_VERSION=1.5.5
   - DJANGO_VERSION=1.6
 
 install:
   - pip install django==$DJANGO_VERSION
 
 script:
-  - python setup.py develop
-  - python setup.py test
+  - make test

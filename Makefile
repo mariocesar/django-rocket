@@ -1,6 +1,6 @@
 all:
 
-.PHONY: flake8 test translatable_strings update_translations
+.PHONY: flake8 test translatable_strings update_translations docs
 
 flake8:
 	flake8 django_buzz tests
@@ -22,3 +22,6 @@ translatable_strings:
 update_translations:
 	tx pull
 	cd django_buzz && django-admin.py compilemessages
+
+docs:
+	cd docs && make html

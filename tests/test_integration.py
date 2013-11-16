@@ -3,7 +3,7 @@ from django.test import TestCase
 
 
 @override_settings(DEBUG=True)
-class DjangoBuzzIntegrationTestCase(TestCase):
+class DjangoRocketIntegrationTestCase(TestCase):
     urls = 'tests.urls'
 
     def test_anonymous_visit(self):

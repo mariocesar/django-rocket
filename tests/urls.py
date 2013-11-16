@@ -9,5 +9,5 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     'tests.views',
-    url(r'^/', include('django_buzz.urls')),
+    url(r'^/', include('django_rocket.urls')),
 )
