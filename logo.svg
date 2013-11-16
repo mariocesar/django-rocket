@@ -9,7 +9,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="100"
+   width="250"
    height="50"
    id="svg2"
    version="1.1"
@@ -50,11 +50,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.0011111"
-     inkscape:cx="59.885444"
-     inkscape:cy="26.135679"
+     inkscape:zoom="2.5005556"
+     inkscape:cx="131.67723"
+     inkscape:cy="38.996169"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g2991"
      showgrid="false"
      inkscape:window-width="1488"
      inkscape:window-height="801"
@@ -69,7 +69,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -81,33 +81,40 @@
     <g
        id="g3854"
        transform="translate(-0.985744,-1.8076866)">
-      <text
-         transform="scale(1.0015789,0.99842358)"
-         xml:space="preserve"
-         style="font-size:39.9377594px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#5a2ca0;fill-opacity:1;stroke:none;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std Condensed"
-         x="2.5703843"
-         y="1046.4136"
-         id="text2989"
-         sodipodi:linespacing="125%"><tspan
-           style="font-size:39.9377594px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:expanded;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#5a2ca0;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std Light Expanded"
-           sodipodi:role="line"
-           id="tspan2991"
-           x="2.5703843"
-           y="1046.4136">Buzz</tspan></text>
-      <path
-         clip-path="url(#clipPath3831)"
-         transform="matrix(1.0000212,0,0,0.99686939,-172.6032,735.6825)"
-         d="m 216.18521,291.68433 c -0.28799,0.49881 -0.81447,-0.14211 -0.82906,-0.47866 -0.0395,-0.91203 1.026,-1.34585 1.78638,-1.17946 1.36014,0.29763 1.92991,1.86425 1.52986,3.09409 -0.5871,1.80484 -2.71244,2.52729 -4.40181,1.88026 -2.25166,-0.86239 -3.13011,-3.56396 -2.23066,-5.70952 1.13185,-2.69997 4.41703,-3.73568 7.01724,-2.58107 3.14921,1.3984 4.34284,5.27096 2.93146,8.32496 -1.66326,3.59904 -6.12541,4.951 -9.63267,3.28187 -4.04928,-1.92709 -5.55983,-6.98024 -3.63227,-10.9404 2.19022,-4.49978 7.8353,-6.16911 12.24811,-3.98266 4.95051,2.45286 6.77875,8.69055 4.33307,13.55583 -2.71517,5.40137 -9.54595,7.38862 -14.86355,4.68346 -5.85236,-2.9772 -7.9987,-10.40144 -5.03386,-16.17126 3.23904,-6.30345 11.25702,-8.60893 17.47898,-5.38427 2.53862,1.3157 4.61587,3.44318 5.89231,5.99983"
-         sodipodi:t0="0"
-         sodipodi:argument="-23.038345"
-         sodipodi:radius="13.785337"
-         sodipodi:revolution="3.5999999"
-         sodipodi:expansion="1"
-         sodipodi:cy="291.68433"
-         sodipodi:cx="216.18521"
-         id="path3823"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         sodipodi:type="spiral" />
+      <g
+         id="g2991"
+         transform="translate(147.31005,-4.0672296)">
+        <text
+           sodipodi:linespacing="125%"
+           id="text2989"
+           y="1046.4136"
+           x="-142.16887"
+           style="font-size:39.9377594px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#5a2ca0;fill-opacity:1;stroke:none;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std Condensed"
+           xml:space="preserve"
+           transform="scale(1.0015789,0.99842358)"><tspan
+             y="1046.4136"
+             x="-142.16887"
+             id="tspan2991"
+             sodipodi:role="line"
+             style="font-size:39.9377594px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:expanded;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#5a2ca0;font-family:Helvetica Neue LT Std;-inkscape-font-specification:Helvetica Neue LT Std Light Expanded">Django Buzz</tspan></text>
+        <g
+           id="g2988">
+          <path
+             clip-path="url(#clipPath3831)"
+             transform="matrix(1.0000212,0,0,0.99686939,-172.6032,735.6825)"
+             d="m 216.18521,291.68433 c -0.28799,0.49881 -0.81447,-0.14211 -0.82906,-0.47866 -0.0395,-0.91203 1.026,-1.34585 1.78638,-1.17946 1.36014,0.29763 1.92991,1.86425 1.52986,3.09409 -0.5871,1.80484 -2.71244,2.52729 -4.40181,1.88026 -2.25166,-0.86239 -3.13011,-3.56396 -2.23066,-5.70952 1.13185,-2.69997 4.41703,-3.73568 7.01724,-2.58107 3.14921,1.3984 4.34284,5.27096 2.93146,8.32496 -1.66326,3.59904 -6.12541,4.951 -9.63267,3.28187 -4.04928,-1.92709 -5.55983,-6.98024 -3.63227,-10.9404 2.19022,-4.49978 7.8353,-6.16911 12.24811,-3.98266 4.95051,2.45286 6.77875,8.69055 4.33307,13.55583 -2.71517,5.40137 -9.54595,7.38862 -14.86355,4.68346 -5.85236,-2.9772 -7.9987,-10.40144 -5.03386,-16.17126 3.23904,-6.30345 11.25702,-8.60893 17.47898,-5.38427 2.53862,1.3157 4.61587,3.44318 5.89231,5.99983"
+             sodipodi:t0="0"
+             sodipodi:argument="-23.038345"
+             sodipodi:radius="13.785337"
+             sodipodi:revolution="3.5999999"
+             sodipodi:expansion="1"
+             sodipodi:cy="291.68433"
+             sodipodi:cx="216.18521"
+             id="path3823"
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             sodipodi:type="spiral" />
+        </g>
+      </g>
     </g>
   </g>
 </svg>
