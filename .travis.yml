@@ -17,7 +17,7 @@ matrix:
 
 
 install:
-  - pip install django==$DJANGO_VERSION
+  - pip install Django"$DJANGO_VERSION"
 
 script:
   - make test
