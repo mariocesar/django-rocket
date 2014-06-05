@@ -16,7 +16,7 @@ setup(
     license=__license__,
     url='https://github.com/mariocesar/django-rocket',
     download_url='https://pypi.python.org/pypi/django-rocket',
-    packages=find_packages(exclude=['tests', 'tests.*']),
+    packages=find_packages(exclude=['tests', 'tests.*', 'example', 'docs', 'env']),
     install_requires=[
         'django>1.5,<1.7',
         'wheel',
