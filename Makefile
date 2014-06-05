@@ -12,7 +12,7 @@ test:
 coverage:
 	coverage erase
 	DJANGO_SETTINGS_MODULE=tests.settings PYTHONPATH=. \
-		coverage run --branch --source=django_rocket `which django-admin.py` test tests
+		coverage run --source=django_rocket `which django-admin.py` test tests
 	coverage html
 
 translatable_strings:

@@ -3,5 +3,6 @@
 *.egg-info
 _build
 env
+.coverage
 
 *.sqlite3

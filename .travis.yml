@@ -18,6 +18,11 @@ matrix:
 
 install:
   - pip install Django"$DJANGO_VERSION"
+  - pip install coverage
+  - pip install coveralls
 
 script:
   - make test
+
+after_success:
+  - coveralls
