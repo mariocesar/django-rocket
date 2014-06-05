@@ -16,7 +16,7 @@ coverage:
 	coverage html
 
 translatable_strings:
-	cd django_rocket && django-admin.py makemessages -l es --no-wrap --no-obsolete
+	cd django_rocket && django-admin.py makemessages -l es --no-wrap --no-obsolete --keep-pot
 	@echo "Please commit changes and run 'tx push -s' (or wait for Transifex to pick them)"
 
 update_translations:
