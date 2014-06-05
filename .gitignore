@@ -2,4 +2,6 @@
 *.idea
 *.egg-info
 _build
+env
 
+*.sqlite3

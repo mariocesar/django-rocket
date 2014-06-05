@@ -18,7 +18,8 @@ setup(
     download_url='https://pypi.python.org/pypi/django-rocket',
     packages=find_packages(exclude=['tests', 'tests.*']),
     install_requires=[
-        'django>=1.5.5,<1.7',
+        'django>1.5,<1.7',
+        'wheel',
     ],
     extras_require={
         'Docs': ["sphinx", "sphinx_rtd_theme"],
