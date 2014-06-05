@@ -1,4 +1,4 @@
-|logo| |travis| |pypi|
+|logo| |travis| |pypi| |coverage|
 
 Create your landing page with all the common features: A release date counter,
 email subscribers, social integration, segmentation, etc.
@@ -68,8 +68,8 @@ following. ::
 
 For more detailed documentation go to http://django-rocket.readthedocs.org/
 
-
 |bitdeli|
+
 
 .. |logo| image:: https://raw.github.com/mariocesar/django-rocket/master/logo.png
 
@@ -78,6 +78,9 @@ For more detailed documentation go to http://django-rocket.readthedocs.org/
 
 .. |pypi| image:: https://badge.fury.io/py/django-rocket.png
     :target: http://badge.fury.io/py/django-rocket
+
+.. |coverage| image:: https://coveralls.io/repos/mariocesar/django-rocket/badge.png
+    :target: https://coveralls.io/r/mariocesar/django-rocket
 
 .. |bitdeli| image:: https://d2weczhvl823v0.cloudfront.net/mariocesar/django-rocket/trend.png
     :target: https://bitdeli.com/free
