@@ -1,7 +1,8 @@
 # coding: utf-8
+from __future__ import unicode_literals
 
-__author__ = u"Mario César Señoranis Ayala"
+__author__ = "Mario César Señoranis Ayala"
 __license__ = "MIT"
 __version__ = '1.0'
 __email__ = "mariocesar@creat1va.com"
-__status__ = "Production"
+__status__ = "Alpha"
