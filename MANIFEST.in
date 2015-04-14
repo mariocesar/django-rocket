@@ -1,0 +1,9 @@
+include README.rst
+include AUTHORS
+include LICENSE
+include MANIFEST.in
+recursive-include docs *
+recursive-include tests *
+recursive-include django_rocket/templates *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

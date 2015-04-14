@@ -1,8 +1,11 @@
 *.pyc
 *.idea
 *.egg-info
-_build
-env
+
+build/
+dist/
+env/
+
 .coverage
 
 *.sqlite3
