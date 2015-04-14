@@ -34,6 +34,7 @@ class InvitationToken(models.Model):
                   'No value to make it always enabled')
 
     created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.created)

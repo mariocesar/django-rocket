@@ -1,14 +1,15 @@
 from django.views import generic
 from django.conf import settings
 from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseNotFound
 from django.db import transaction
+from django.core.cache import caches
 
-from .forms import SubscriberForm, InvitationTokenCheckForm
+from .forms import SubscriberForm, InvitationTokenCheckForm, ConfirmRedeemInvitation
 from .signals import new_subscriber, valid_token
 
 
-class RequestInvitationView(generic.FormView):
+class InvitationView(generic.FormView):
     template_name = 'django_rocket/request_invitation.html'
     form_class = SubscriberForm
 
@@ -24,19 +25,49 @@ class RequestInvitationView(generic.FormView):
         return HttpResponseRedirect(reverse('django_rocket:request_invitation_completed'))
 
 
-class RequestAccessCompletedView(generic.FormView):
+class InvitationCompletedView(generic.TemplateView):
+    template_name = 'django_rocket/request_invitation_completed.html'
+
+
+class RequestAccessView(generic.FormView):
     template_name = 'django_rocket/request_access.html'
     form_class = InvitationTokenCheckForm
 
     @transaction.atomic
     def form_valid(self, form):
         token = form.use_token()
-        valid_token.send(
-            sender=self.__class__,
-            request=self.request,
-            token=token)
-        return HttpResponseRedirect(settings.LOGIN_URL)
+
+        valid_token.send(sender=self.__class__, request=self.request, token=token)
+        response = HttpResponseRedirect(settings.LOGIN_URL)
+        response.set_signed_cookie('invite', token.token, max_age=None)
+
+        return response
 
 
-class RequestInvitationCompletedView(generic.TemplateView):
-    template_name = 'django_rocket/request_invitation_completed.html'
+class RequestAccessCompletedView(generic.TemplateView):
+    template_name = 'django_rocket/request_access_completed.html'
+
+
+class RedeemInvitationView(generic.View):
+    template_name = 'django_rocket/request_access.html'
+    form_class = ConfirmRedeemInvitation
+
+    def dispatch(self, request, *args, **kwargs):
+        try:
+            self.token = InvitationToken.objects.get(token=kwargs['token'], uses__gte=1)
+        except InvitationToken.DoesNotExist:
+            return HttpResponseNotFound()
+        return super(RedeemInvitationView, self).dispatch(request, *args, **kwargs)
+
+    @transaction.atomic
+    def form_valid(self, form):
+        self.token.uses -= 1
+        self.token.save(update_fields=('uses',))
+
+        valid_token.send(sender=self.__class__, request=self.request, token=self.token)
+
+        response = HttpResponseRedirect(settings.LOGIN_URL)
+        response.set_signed_cookie('invite', token.token, max_age=None)
+
+        return response
+

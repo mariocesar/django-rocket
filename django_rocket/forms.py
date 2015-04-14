@@ -33,3 +33,9 @@ class InvitationTokenCheckForm(forms.Form):
         token.uses -= 1
         token.save(update_fields=('uses',))
         return token
+
+
+class ConfirmRedeemInvitation(forms.Form):
+    confirmation = forms.BooleanField(initial=False,
+                                      required=True,
+                                      label='Are you sure you want to redeem this code')
