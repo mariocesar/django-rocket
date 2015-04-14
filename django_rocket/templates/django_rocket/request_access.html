@@ -1,0 +1,15 @@
+{% extends 'django_rocket/base.html' %}
+
+{% block rocket_content %}
+<h1>We are invite only</h1>
+
+<p>You can get in by requesting an invitation code, fill the form bellow.</p>
+
+<form action="{% url 'django_rocket:request_access' %}" method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <div>
+    <button type="submit">Send</button>
+  </div>
+</form>
+{% endblock %}

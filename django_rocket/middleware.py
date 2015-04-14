@@ -1,0 +1,4 @@
+
+
+class InvitationOnlyMiddleware(object):
+    pass
