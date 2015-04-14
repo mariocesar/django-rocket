@@ -17,6 +17,7 @@ setup(
     url='https://github.com/mariocesar/django-rocket',
     download_url='https://pypi.python.org/pypi/django-rocket',
     packages=find_packages(exclude=['tests', 'tests.*', 'example', 'docs', 'env']),
+    include_package_data=True,
     install_requires=[
         'django>1.5,<1.8',
         'wheel',
