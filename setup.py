@@ -19,8 +19,7 @@ setup(
     packages=find_packages(exclude=['tests', 'tests.*', 'example', 'docs', 'env']),
     include_package_data=True,
     install_requires=[
-        'django>1.5,<1.8',
-        'wheel',
+        'django>=2.2.5',
     ],
     extras_require={
         'develop': ["coverage", "sphinx", "sphinx_rtd_theme"],
