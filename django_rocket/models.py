@@ -1,13 +1,10 @@
-from datetime import date
-
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
-from django.utils.translation import ugettext_lazy as _
 from django.utils.crypto import get_random_string
+from django.utils.translation import ugettext_lazy as _
+
 from django_rocket.utils import create_token
 
 
-@python_2_unicode_compatible
 class Subscriber(models.Model):
     first_name = models.CharField(max_length=140, blank=True)
     last_name = models.CharField(max_length=140, blank=True)
@@ -23,7 +20,6 @@ class Subscriber(models.Model):
         return self.email
 
 
-@python_2_unicode_compatible
 class InvitationToken(models.Model):
     code = models.CharField(max_length=12, unique=True, blank=True)
     token = models.CharField(max_length=40, unique=True, editable=False)

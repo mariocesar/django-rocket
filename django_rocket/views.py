@@ -1,11 +1,11 @@
-from django.views import generic
 from django.conf import settings
-from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect, HttpResponseNotFound
 from django.db import transaction
-from django.core.cache import caches
+from django.http import HttpResponseNotFound, HttpResponseRedirect
+from django.urls import reverse
+from django.views import generic
 
-from .forms import SubscriberForm, InvitationTokenCheckForm, ConfirmRedeemInvitation
+from .forms import ConfirmRedeemInvitation, InvitationTokenCheckForm, SubscriberForm
+from .models import InvitationToken
 from .signals import new_subscriber, valid_token
 
 
@@ -70,4 +70,3 @@ class RedeemInvitationView(generic.View):
         response.set_signed_cookie('invite', token.token, max_age=None)
 
         return response
-
