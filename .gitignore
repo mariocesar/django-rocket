@@ -1,6 +1,7 @@
 *.pyc
 *.idea
 *.egg-info
+.python-version
 
 build/
 dist/
