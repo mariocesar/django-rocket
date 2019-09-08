@@ -1,6 +1,6 @@
-from django_rocket import __version__, __author__, __email__, __license__
+from setuptools import find_packages, setup
 
-from setuptools import setup, find_packages
+from django_rocket import __author__, __email__, __license__, __version__
 
 README = open("README.rst").read()
 
@@ -17,10 +17,9 @@ setup(
     license=__license__,
     url="https://github.com/mariocesar/django-rocket",
     download_url="https://pypi.python.org/pypi/django-rocket",
-    packages=find_packages(exclude=["tests", "tests.*", "example", "docs", "env"]),
+    packages=find_packages(exclude=["tests", "example", "docs"]),
     include_package_data=True,
-    install_requires=["django>=2.2.5"],
-    extras_require={"develop": ["flake8", "coverage", "sphinx", "sphinx_rtd_theme"]},
+    install_requires=["django>=2.2"],
     zip_safe=False,
     classifiers=[
         "Operating System :: OS Independent",

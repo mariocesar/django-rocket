@@ -1,14 +1,9 @@
 all:
-	pip install -e .[develop]
+	pip install -r requirements.txt
 
 .PHONY: flake8
 flake8:
 	flake8 django_rocket tests
-
-.PHONY: test
-test:
-	DJANGO_SETTINGS_MODULE=tests.settings PYTHONPATH=. \
-		django-admin.py test tests
 
 .PHONY: coverage
 coverage:

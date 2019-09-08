@@ -1,8 +1,9 @@
+from uuid import uuid4
+
 from django.db import models
 from django.utils.crypto import get_random_string
 from django.utils.translation import ugettext_lazy as _
-
-from django_rocket.utils import create_token
+from django.utils.crypto import salted_hmac
 
 
 class Subscriber(models.Model):
@@ -39,5 +40,5 @@ class InvitationToken(models.Model):
         if not self.id:
             if not self.code:
                 self.code = get_random_string()
-        self.token = create_token(self.code)
+        self.token = uuid4().hex
         return super(InvitationToken, self).save(**kwargs)

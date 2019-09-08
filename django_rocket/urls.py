@@ -9,6 +9,8 @@ from .views import (
     RequestAccessView,
 )
 
+app_name = "django_rocket"
+
 urlpatterns = [
     url(r'^$', InvitationView.as_view(),
         name='request_invitation'),

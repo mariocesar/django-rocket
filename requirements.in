@@ -1,0 +1,12 @@
+Django>2.2
+
+pip-tools
+flake8
+sphinx
+sphinx_rtd_theme
+
+pytest
+pytest-django
+pytest-cov
+
+-e .

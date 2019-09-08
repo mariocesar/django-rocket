@@ -3,12 +3,12 @@ from django.contrib import admin
 from django_rocket.models import InvitationToken, Subscriber
 
 
-@admin.register(InvitationToken)
+@admin.register(Subscriber)
 class SubscriberAdmin(admin.ModelAdmin):
-    list_display = ('email', 'created')
+    list_display = ('created', 'email')
     date_hierarchy = 'created'
 
 
-@admin.register(Subscriber)
+@admin.register(InvitationToken)
 class InvitationTokenAdmin(admin.ModelAdmin):
-    list_display = ('created', 'token', 'uses')
+    list_display = ('created', 'code', 'uses')
