@@ -4,8 +4,6 @@
 #
 #    pip-compile requirements.in
 #
--e .
-
 alabaster==0.7.12         # via sphinx
 atomicwrites==1.3.0       # via pytest
 attrs==19.1.0             # via packaging, pytest
